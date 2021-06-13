@@ -1,9 +1,10 @@
 package jar
 
 import (
-	"github.com/headzoo/ut"
 	"os"
 	"testing"
+
+	"github.com/headzoo/ut"
 )
 
 func TestMemoryBookmarks(t *testing.T) {

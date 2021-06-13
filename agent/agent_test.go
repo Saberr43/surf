@@ -2,9 +2,10 @@ package agent
 
 import (
 	"fmt"
-	"github.com/headzoo/ut"
 	"runtime"
 	"testing"
+
+	"github.com/headzoo/ut"
 )
 
 func TestCreate(t *testing.T) {

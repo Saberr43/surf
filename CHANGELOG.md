@@ -4,10 +4,10 @@
 
 
 #### v0.5.7 - 2016/02/21
-* Add the ability to set form fields that weren't present in the form. [#36](https://github.com/headzoo/surf/pull/36)
-* Added Form.ClickByValue. [#31](https://github.com/headzoo/surf/pull/31)
-* Copy request headers to avoid mixing across requests. [#29](https://github.com/headzoo/surf/pull/29)
-* Allow input fields without values. [#28](https://github.com/headzoo/surf/pull/28)
+* Add the ability to set form fields that weren't present in the form. [#36](https://github.com/Saberr43/surf/pull/36)
+* Added Form.ClickByValue. [#31](https://github.com/Saberr43/surf/pull/31)
+* Copy request headers to avoid mixing across requests. [#29](https://github.com/Saberr43/surf/pull/29)
+* Allow input fields without values. [#28](https://github.com/Saberr43/surf/pull/28)
 
 
 #### v0.5.6 - 2016/02/21
@@ -15,23 +15,23 @@
 
 
 #### v0.5.5 - 2014/05/24
-* Added Browser.Head() method. [#24](https://github.com/headzoo/surf/pull/24)
+* Added Browser.Head() method. [#24](https://github.com/Saberr43/surf/pull/24)
 
 
 #### v0.5.4 - 2015/04/29
-* Added Browser.SetTransport() method. [#15](https://github.com/headzoo/surf/issues/15)
+* Added Browser.SetTransport() method. [#15](https://github.com/Saberr43/surf/issues/15)
 
 
 #### v0.5.3 - 2015/04/28
-* Added SURF_DEBUG_HEADERS environment variable. [#20](https://github.com/headzoo/surf/pull/20)
-* Fixed bug where request headers are being added instead of set. [#19](https://github.com/headzoo/surf/pull/19)
-* Fix for redirects. [#18](https://github.com/headzoo/surf/pull/18)
-* Added support for textareas. [#16](https://github.com/headzoo/surf/pull/16)
+* Added SURF_DEBUG_HEADERS environment variable. [#20](https://github.com/Saberr43/surf/pull/20)
+* Fixed bug where request headers are being added instead of set. [#19](https://github.com/Saberr43/surf/pull/19)
+* Fix for redirects. [#18](https://github.com/Saberr43/surf/pull/18)
+* Added support for textareas. [#16](https://github.com/Saberr43/surf/pull/16)
 
 
 #### v0.5.2 - 2015/03/06
-* Allow calling Post without first opening a page. [#14](https://github.com/headzoo/surf/issues/14)
-* Browser.Download() writes the raw body instead of the parsed DOM. [#13](https://github.com/headzoo/surf/issues/13)
+* Allow calling Post without first opening a page. [#14](https://github.com/Saberr43/surf/issues/14)
+* Browser.Download() writes the raw body instead of the parsed DOM. [#13](https://github.com/Saberr43/surf/issues/13)
 
 
 #### v0.5.1 - 2015/01/29
@@ -45,9 +45,9 @@
 
 
 #### v0.5 - 2015/01/29
-* Extended osName and osVersion to work on various systems. [#7](https://github.com/headzoo/surf/pull/7)
-* Added Browser.DelRequestHeader() method. [#11](https://github.com/headzoo/surf/pull/11)
-* Setting the Referrer header to the current URL in Browser.Post(). [#10](https://github.com/headzoo/surf/pull/10)
+* Extended osName and osVersion to work on various systems. [#7](https://github.com/Saberr43/surf/pull/7)
+* Added Browser.DelRequestHeader() method. [#11](https://github.com/Saberr43/surf/pull/11)
+* Setting the Referrer header to the current URL in Browser.Post(). [#10](https://github.com/Saberr43/surf/pull/10)
 
 
 #### v0.4.9 - 2014/09/18

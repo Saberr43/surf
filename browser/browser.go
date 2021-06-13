@@ -16,8 +16,8 @@ import (
 	"time"
 
 	"github.com/PuerkitoBio/goquery"
-	"github.com/headzoo/surf/errors"
-	"github.com/headzoo/surf/jar"
+	"github.com/Saberr43/surf/errors"
+	"github.com/Saberr43/surf/jar"
 )
 
 // Attribute represents a Browser capability.
@@ -183,7 +183,7 @@ type Browsable interface {
 	Find(expr string) *goquery.Selection
 
 	// Create a new Browser instance and inherit the configuration
-	// Read more: https://github.com/headzoo/surf/issues/23
+	// Read more: https://github.com/Saberr43/surf/issues/23
 	NewTab() (b *Browser)
 }
 
@@ -231,6 +231,29 @@ func (bow *Browser) Open(u string) error {
 		return err
 	}
 	return bow.httpGET(ur, nil)
+}
+
+// OpenFromResponse takes in a response that is already performed, adds to history
+func (bow *Browser) OpenFromResponse(resp *http.Response) error {
+	bow.preSend()
+
+	var err error
+	bow.body, err = ioutil.ReadAll(resp.Body)
+	if err != nil {
+		return err
+	}
+
+	buff := bytes.NewBuffer(bow.body)
+	dom, err := goquery.NewDocumentFromReader(buff)
+	if err != nil {
+		return err
+	}
+
+	bow.history.Push(bow.state)
+	bow.state = jar.NewHistoryState(nil, resp, dom)
+	bow.postSend()
+
+	return nil
 }
 
 // Head requests the given URL using the HEAD method.

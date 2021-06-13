@@ -2,7 +2,7 @@ Surf
 ====
 
 [![Build Status](https://img.shields.io/travis/headzoo/surf/master.svg?style=flat-square)](https://travis-ci.org/headzoo/surf)
-[![GoDoc](https://godoc.org/github.com/headzoo/surf?status.svg)](http://godoc.org/github.com/headzoo/surf)
+[![GoDoc](https://godoc.org/github.com/Saberr43/surf?status.svg)](http://godoc.org/github.com/Saberr43/surf)
 [![Documentation](https://img.shields.io/badge/documentation-readthedocs-blue.svg?style=flat-square)](http://surf.readthedocs.io/)
 [![MIT License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://raw.githubusercontent.com/headzoo/surf/master/LICENSE.md)
 
@@ -59,7 +59,7 @@ the [golang plugin](http://plugins.jetbrains.com/plugin/5047).
 
 Contributions have been made to Surf by the following awesome developers:
 
-* [Sean Hickey](https://github.com/headzoo)
+* [Sean Hickey](https://github.com/Saberr43)
 * [Haruyama Seigo](https://github.com/haruyama)
 * [Tatsushi Demachi](https://github.com/tatsushid)
 * [Charl Matthee](https://github.com/charl)

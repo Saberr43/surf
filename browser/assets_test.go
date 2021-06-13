@@ -2,9 +2,10 @@ package browser
 
 import (
 	"bytes"
-	"github.com/headzoo/ut"
 	"net/url"
 	"testing"
+
+	"github.com/headzoo/ut"
 )
 
 func TestDownload(t *testing.T) {

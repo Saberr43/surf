@@ -1,14 +1,16 @@
 package browser
 
 import (
+	"fmt"
 	"io"
 	"net/http"
 	"net/http/httptest"
 	"testing"
 	"time"
 
-	"github.com/headzoo/surf/agent"
-	"github.com/headzoo/surf/jar"
+	"github.com/PuerkitoBio/goquery"
+	"github.com/Saberr43/surf/agent"
+	"github.com/Saberr43/surf/jar"
 )
 
 func newDefaultTestBrowser() *Browser {
@@ -28,7 +30,7 @@ func newDefaultTestBrowser() *Browser {
 }
 
 // TestRedirect
-// See: https://github.com/headzoo/surf/pull/18
+// See: https://github.com/Saberr43/surf/pull/18
 func TestRedirect(t *testing.T) {
 	ts0 := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		switch r.URL.Path {
@@ -140,8 +142,33 @@ func TestCookieHeader(t *testing.T) {
 	}
 }
 
+func TestOpenFromResponse(t *testing.T) {
+	url := "https://www.google.com/"
+	resp, err := http.Get(url)
+	if err != nil {
+		t.Fatal(err)
+	}
+
+	b := newDefaultTestBrowser()
+	err = b.OpenFromResponse(resp)
+	if err != nil {
+		t.Fatal(err)
+	}
+
+	dc := 0
+	b.Find("div").Each(func(i int, s *goquery.Selection) {
+		dc++
+	})
+
+	if dc == 0 {
+		t.Fatal("unexpected div count")
+	}
+
+	fmt.Printf("%d div tags at %s\n", dc, url)
+}
+
 // Should inherit the configuration into a new instance
-func TestTabInheritance(t *testing.T){
+func TestTabInheritance(t *testing.T) {
 	bow1 := newDefaultTestBrowser()
 	bow2 := newDefaultTestBrowser()
 
@@ -163,7 +190,7 @@ func TestTabInheritance(t *testing.T){
 
 	// Create a new browser
 	bow3 := bow1.NewTab()
-	if bow1 == bow3{
+	if bow1 == bow3 {
 		t.Fatal("Tab did not create a new browser")
 	}
 
@@ -177,29 +204,29 @@ func TestTabInheritance(t *testing.T){
 		t.Fatal("Tab did not copy the userAgent")
 	}
 
-	for k,v := range bow1.attributes {
-		if bow1.attributes[k] != bow2.attributes[k]{
+	for k, v := range bow1.attributes {
+		if bow1.attributes[k] != bow2.attributes[k] {
 			t.Errorf("Tab did not copy the %v attribute", v)
 		}
 	}
 
-	if bow1.State() != bow2.State(){
+	if bow1.State() != bow2.State() {
 		t.Fatal("Tab did not copy the state")
 	}
 
-	if bow1.BookmarksJar() != bow2.BookmarksJar(){
+	if bow1.BookmarksJar() != bow2.BookmarksJar() {
 		t.Fatal("Tab did not copy the BookmarksJar")
 	}
 
-	if bow1.CookieJar() != bow2.CookieJar(){
+	if bow1.CookieJar() != bow2.CookieJar() {
 		t.Fatal("Tab did not copy the CookieJar")
 	}
 
-	if bow1.HistoryJar() != bow2.HistoryJar(){
+	if bow1.HistoryJar() != bow2.HistoryJar() {
 		t.Fatal("Tab did not copy the HistoryJar")
 	}
 
-	if len(bow1.headers) != len(bow2.headers){
+	if len(bow1.headers) != len(bow2.headers) {
 		t.Fatal("Tab did not copy the HeadersJar")
 	}
 

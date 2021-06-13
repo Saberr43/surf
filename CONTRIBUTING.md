@@ -11,7 +11,7 @@ This document outlines the guidelines for contributing to the project.
 
 ## Issues
 
-The [issue tracker](https://github.com/headzoo/surf/issues) is
+The [issue tracker](https://github.com/Saberr43/surf/issues) is
 the preferred channel for [bug reports](#bug-reports), [features requests](#feature-requests)
 and submitting [pull requests](#pull-requests).
 

@@ -1,6 +1,6 @@
 # agent
 --
-    import "github.com/headzoo/surf/agent"
+    import "github.com/Saberr43/surf/agent"
 
 Package agent generates user agents strings for well known browsers and for
 custom browsers.

@@ -1,8 +1,9 @@
 package util
 
 import (
-	"github.com/headzoo/ut"
 	"testing"
+
+	"github.com/headzoo/ut"
 )
 
 func TestFileExists(t *testing.T) {

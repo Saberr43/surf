@@ -1,9 +1,9 @@
 # Surf
 [![Build Status](https://img.shields.io/travis/headzoo/surf/master.svg?style=flat-square)](https://travis-ci.org/headzoo/surf)
-[![Github](https://img.shields.io/badge/source-github-blue.svg?style=flat-square)](https://github.com/headzoo/surf/)
+[![Github](https://img.shields.io/badge/source-github-blue.svg?style=flat-square)](https://github.com/Saberr43/surf/)
 [![MIT License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://raw.githubusercontent.com/headzoo/surf/master/LICENSE.md)
-[![GitHub Stars](https://img.shields.io/github/stars/headzoo/surf.svg?style=flat-square)](https://github.com/headzoo/surf/stargazers)
-[![GitHub Forks](https://img.shields.io/github/forks/headzoo/surf.svg?style=flat-square)](https://github.com/headzoo/surf/network)
+[![GitHub Stars](https://img.shields.io/github/stars/headzoo/surf.svg?style=flat-square)](https://github.com/Saberr43/surf/stargazers)
+[![GitHub Forks](https://img.shields.io/github/forks/headzoo/surf.svg?style=flat-square)](https://github.com/Saberr43/surf/network)
 
 Surf is a Go (golang) library that implements a virtual web browser that you control pragmatically.
 Surf isn't just another Go solution for downloading content from the web. Surf is designed to behave like web
