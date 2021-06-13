@@ -234,11 +234,11 @@ func (bow *Browser) Open(u string) error {
 }
 
 // OpenFromResponse takes in a response that is already performed, adds to history
-func (bow *Browser) OpenFromResponse(resp *http.Response) error {
+func (bow *Browser) OpenFromReader(r io.Reader) error {
 	bow.preSend()
 
 	var err error
-	bow.body, err = ioutil.ReadAll(resp.Body)
+	bow.body, err = ioutil.ReadAll(r)
 	if err != nil {
 		return err
 	}
@@ -250,7 +250,7 @@ func (bow *Browser) OpenFromResponse(resp *http.Response) error {
 	}
 
 	bow.history.Push(bow.state)
-	bow.state = jar.NewHistoryState(nil, resp, dom)
+	bow.state = jar.NewHistoryState(nil, nil, dom)
 	bow.postSend()
 
 	return nil

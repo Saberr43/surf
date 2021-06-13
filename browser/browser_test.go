@@ -150,7 +150,7 @@ func TestOpenFromResponse(t *testing.T) {
 	}
 
 	b := newDefaultTestBrowser()
-	err = b.OpenFromResponse(resp)
+	err = b.OpenFromReader(resp.Body)
 	if err != nil {
 		t.Fatal(err)
 	}
